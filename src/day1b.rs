@@ -14,7 +14,8 @@ fn main() {
     lvalues.sort();
     rvalues.sort();
 
-    let similarity_score: i32 = lvalues.iter()
+    let similarity_score: i32 = lvalues
+        .iter()
         .map(|e| e * rvalues.iter().filter(|v| *v == e).count() as i32)
         .sum();
 
